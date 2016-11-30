@@ -1,4 +1,4 @@
-\documentclass[man]{apa6} 
+\documentclass[man]{apa6}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -18,9 +18,9 @@
 \DeclareLanguageMapping{english}{american-apa}
 \addbibresource{biblio.bib}
 
-\usepackage{geometry}              
-\geometry{letterpaper}                   		
-\usepackage{graphicx}						
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage{graphicx}
 
 \usepackage{threeparttable}
 \usepackage{amsmath}
@@ -32,7 +32,7 @@
 \affiliation{Uniwersytet Warszawski}
 
 \abstract{Jakie aspekty indywidualnego i kolektywnego `Ja' wyznaczają pozytywną samoocenę. Znaczenie perspektywy sprawcy i biorcy.}
-       
+
 \keywords{indywidualna samoocena, kolektywna samoocena, model podwojnej perspektywy, sprawczosc, wspólnotowosc}
 
 
@@ -78,14 +78,7 @@ Samoocenę w niniejszym projekcie zoperacjonalizowano jako poziom poziom ogólny
 \subsection{Strategia analityczna}
 Analizy przedstawione w niniejszej rozprawie -- w znaczącej mierze bazujące na ogólnym modelu liniowym -- przeprowadzono w podejściu bayesowkim \parencite[zob. np.,][]{gelman2014bayesian,gill2014bayesian, kruschke2014doing}. Główną zaletą podejścia bayesowskiego jest możliwość uwzględnienia w analizach przeszłej wiedzy (tzw. prior) i przez to analitycznego powiązania ze sobą wyników linii badań (w odróżnieniu od klasycznego podejścia, w którym analizy są prowadzone tak jak gdyby badania były prowadzone w próżni, w oderwaniu pozostałych). Dzięki uwzględnieniu przeszłej wiedza wzrasta pewność co do analizowanych efektów i maleje szansa uzyskania czysto przypadkowych zależności. Ponadto, modele w podejściu bayesowkim cechuje znaczna elastyczność (tj. możliwość kwantyfikowania niepewności pochodzącej z różnych źródeł), przy podobnych lub często mniejszych wymogach co do liczebności badanej próby. Choć metody bayesowkie są niezwykle powszechne w statystyce, w pracach psychologicznych, zdominowanych przez podejście frekwentystyczne, są nadal rzadkością. Z tego względu w tej sekcji przedstawiono krótkie wprowadzenie mające ułatwić zrozumienie terminologii zawartej w części analitycznej rozprawy.\\
 
-W ramach podejścia bayesowskiego zarówno dane, jak i
-parametry traktowane są jako zmienne losowe i jako
-takie posiadają ustalone rozkłady\footnote{W
-przypadku podejścia frekwentystycznego losowe
-są jedynie dane, natomiast parametry są
-traktowane jako posiadające jedną stałą wartość.}.
-Podstawowe równanie określa zależność pomiędzy
-rozkładami danych i parametrów:
+W ramach podejścia bayesowskiego zarówno dane, jak i parametry traktowane są jako zmienne losowe i jako takie posiadają ustalone rozkłady\footnote{W przypadku podejścia frekwentystycznego losowe są jedynie dane, natomiast parametry są traktowane jako posiadające jedną stałą wartość.}. Podstawowe równanie określa zależność pomiędzy rozkładami danych i parametrów:
 
 \begin{equation}\label{eq:bayes}
     P(\theta | \mathcal{D}) =
@@ -93,118 +86,16 @@ rozkładami danych i parametrów:
     {P(\mathcal{D})}
 \end{equation}
 
-gdzie $P(\theta | \mathcal{D})$ oznacza rozkład
-prawdopodobieństwa parametrów przy określonych
-wartościach danych (tzw. rozkład posterior -- po dokonaniu obserwacji),
-$P(\mathcal{D} | \theta)$ oznacza rozkład
-prawdopodobieństwa danych przy określonych
-wartościach parametrów (inaczej funkcja
-wiarygodności związana z obserwacjami), $P(\theta)$ oznacza bezwarunkowy
-rozkład parametrów (tzw. rozkład prior -- przed dokonaniem obserwacji), a
-$P(\mathcal{D})$ oznacza bezwarunkowy rozkład
-danych (traktowany jako stała i czasami pomijany
-przy zachowaniu proporcjonalności obu stron
-równania). Mniej technicznym językiem: przekonania
-na temat występujących w populacji zależności
-(posterior) można ująć jako iloczyn wcześniejszej
-wiedzy (prior) i dokonanych obserwacji
-(funkcja wiarygodności). Lub jeszcze inaczej:
-równanie określa w jaki sposób obserwacje
-zmieniają przekonania badacza dotyczące interesującego go
+gdzie $P(\theta | \mathcal{D})$ oznacza rozkład prawdopodobieństwa parametrów przy określonych wartościach danych (tzw. rozkład posterior -- po dokonaniu obserwacji), $P(\mathcal{D} | \theta)$ oznacza rozkład prawdopodobieństwa danych przy określonych wartościach parametrów (inaczej funkcja wiarygodności związana z obserwacjami), $P(\theta)$ oznacza bezwarunkowy rozkład parametrów (tzw. rozkład prior -- przed dokonaniem obserwacji), a $P(\mathcal{D})$ oznacza bezwarunkowy rozkład danych (traktowany jako stała i czasami pomijany przy zachowaniu proporcjonalności obu stron równania). Mniej technicznym językiem: przekonania na temat występujących w populacji zależności (posterior) można ująć jako iloczyn wcześniejszej wiedzy (prior) i dokonanych obserwacji (funkcja wiarygodności). Lub jeszcze inaczej: równanie określa w jaki sposób obserwacje zmieniają przekonania badacza dotyczące interesującego go
 wycinka rzeczywistości. \\
-Celem analizy w podejściu bayesowkim jest
-uzyskanie rozkładu posterior (oraz takich jego
-charakterystyk jak wartość oczekiwana,
-wariancja, itd.) interesujących
-badacza parametrów. Zgodnie z równaniem \ref{eq:bayes}
-konieczne są tego informacje na temat trzech
-elementów. Funkcja wiarygodności jest obliczana
-podobnie jak w podejściu frekwentystycznym
-(przykładowo przy estymowaniu
-parametrów w równaniu regresji), tj.
-poprzez dobór wartości parametrów maksymalizujących
-wartość funkcji wiarygodności przy określonych
-danych. Rozkład
-prior jest ustalany na podstawie substantywnej wiedzy
-(pochodzącej z wcześniejszych badań, metaanaliz,
-na podstawie wiedzy eksperckiej, itd.). Rozkład
-prior dla niektórych parametrów może być również
-ustalony na podstawie tego co powszechnie o nich
-wiadomo (np. wartość odchylenia standardowego
-nigdy nie jest mniejsza od 0, a wartość absolutna
-współczynnika korelacji nigdy nie jest większa od 1).
-Gdy ustalenie rozkładu prior jest trudne lub
-niemożliwe, powszechne jest stosowanie tzw.
-nieinformatywnych lub referencyjnych rozkładów,
-tzn. takich które nie faworyzują żadnej określonej
-wartości (takim rozkładem może być np. rozkład
-jednostajny, w przypadku parametrów oznaczających
-dyspersję powszechne jest stosowanie rozkładu
-Gamma, uciętego rozkładu Normalnego, lub
-uciętego rozkładu Cauchy'ego).\\
-Analityczne ustalenie ostatniego elementu równania --
-rozkładu brzegowego danych -- jest z pozoru najbardziej
-kłopotliwe. W przypadku rozkładów ciągłych (np.
-rozkładu Normalnego) taka operacja wymaga
-policzenia całki:
+Celem analizy w podejściu bayesowkim jest uzyskanie rozkładu posterior (oraz takich jego charakterystyk jak wartość oczekiwana, wariancja, itd.) interesujących badacza parametrów. Zgodnie z równaniem \ref{eq:bayes} konieczne są tego informacje na temat trzech elementów. Funkcja wiarygodności jest obliczana podobnie jak w podejściu frekwentystycznym (przykładowo przy estymowaniu parametrów w równaniu regresji), tj. poprzez dobór wartości parametrów maksymalizujących wartość funkcji wiarygodności przy określonych danych. Rozkład prior jest ustalany na podstawie substantywnej wiedzy (pochodzącej z wcześniejszych badań, metaanaliz, na podstawie wiedzy eksperckiej, itd.). Rozkład prior dla niektórych parametrów może być również ustalony na podstawie tego co powszechnie o nich wiadomo (np. wartość odchylenia standardowego nigdy nie jest mniejsza od 0, a wartość absolutna współczynnika korelacji nigdy nie jest większa od 1). Gdy ustalenie rozkładu prior jest trudne lub niemożliwe, powszechne jest stosowanie tzw. nieinformatywnych lub referencyjnych rozkładów, tzn. takich które nie faworyzują żadnej określonej wartości (takim rozkładem może być np. rozkład jednostajny, w przypadku parametrów oznaczających dyspersję powszechne jest stosowanie rozkładu Gamma, uciętego rozkładu Normalnego, lub uciętego rozkładu Cauchy'ego).\\
+Analityczne ustalenie ostatniego elementu równania -- rozkładu brzegowego danych -- jest z pozoru najbardziej kłopotliwe. W przypadku rozkładów ciągłych (np. rozkładu Normalnego) taka operacja wymaga policzenia całki:
 \begin{equation}
     \int P(\mathcal{D} | \theta)\times P(\theta)\ \mathrm{d}\theta
 \end{equation}
-co zazwyczaj jest operacją trudną nawet dla
-komputera, a dość często jest to niemożliwe. \\
-Obecnie
-ten problem jest rozwiązywany przez zastosowanie
-symulacji Monte Carlo, a w przypadku modeli
-wielozmiennowych przez jej wariantu -- tzw. Markov
-chain Monte Carlo \parencite[MCMC,][]{hastings1970monte}. Ten wariant symulacji
-polega na uruchomieniu ciągu (\emph{chain}) losowych,
-w niewielkim stopniu skorelowanych wartości,
-który ``przeszukuje'' przestrzeń parametrów modelu.
-Po pewnym czasie ciąg osiąga stan tzw.
-konwergencji a jego wartości można traktować
-jako wylosowane niezależnie z rozkładu posterior i
-po odrzuceniu wartości początkowych (przed
-konwergencją) posłużyć się pozostałymi wartościami
-do podsumowania
-rozkładu. Aby ustalić, czy ciąg osiągnął konwergencję,
-wykonuje się zazwyczaj jeden (lub kilka) z opracowanych
-testów diagnostycznych;
-w niniejszej rozprawie do tego celu
-wykorzystano m.in. wskaźnik potencjalnej
-redukcji skali \parencite[\emph{potential scale reduction factor},][]{gelman1992inference}.
-Jako reguła kciuka: wartości tego
-współczynnika poniżej 1,1 wskazują,
-że nie ma powodów do odrzucenia ciągu ze względu
-na brak konwergencji.\\
-Rozład posterior podsumowuje się zazwyczaj podając
-jego wartość centralną (np. średnią) i miarę dyspersji
-(np. odchylenie standardowe). Z perspektywy
-badacza najbardziej istotne jest poznanie
-przedziału wiarygodności (\emph{credible interval}).
-Przedział wiarygodności określa fragment przestrzeni parametrów,
-w którym skupiony jest określony procent rozkładu (np. 95\%);
-czyli innymi słowy gdzie określonym z prawdopodobieństwem
-można spodziewać się wartości parametrów\footnote{
-Choć ta definicja może nasuwać skojarzenia z
-przedziałem ufności, nie należy mylić ze sobą
-tych dwóch koncepcji -- przedział ufności
-ma zdecydowanie inna mniej intuicyjną interpretację
-\parencite[zob. np.,][]{gill2014bayesian}.
-}. Przy wykorzystaniu rozkładu posterior można
-również testować hipotezy i określić prawdopodobieństwo
-z jakim parametr (np. współczynnik regresji) lub
-różnica parametrów (np. różnica średnich) jest większa
-lub mniejsza od określonej wartości (np. 0).
-Należy podkreślić, że takie prawdopodobieństwo
-należy traktować jako prawdopodobieństwo warunkowe
-(tj. prawdopodobieństwo przyjęcia przez
-parametry określonych wartości przy
-uwzględnieniu obserwacji badacza). Ponadto, pomimo, że
-w niniejszej rozprawie prawdopodobieństwo posterior
-jest raportowane w podobnej formie jak wartość $p$,
-należy
-zaznaczyć, że są to zupełnie różne koncepcje
-i nie należy mylić ich ze sobą.
+co zazwyczaj jest operacją trudną nawet dla komputera, a dość często jest to niemożliwe. \\
+Obecnie ten problem jest rozwiązywany przez zastosowanie symulacji Monte Carlo, a w przypadku modeli wielozmiennowych przez jej wariantu -- tzw. Markov chain Monte Carlo \parencite[MCMC,][]{hastings1970monte}. Ten wariant symulacji polega na uruchomieniu ciągu (\emph{chain}) losowych, w niewielkim stopniu skorelowanych wartości, który ``przeszukuje'' przestrzeń parametrów modelu. Po pewnym czasie ciąg osiąga stan tzw. konwergencji a jego wartości można traktować jako wylosowane niezależnie z rozkładu posterior i po odrzuceniu wartości początkowych (przed konwergencją) posłużyć się pozostałymi wartościami do podsumowania rozkładu. Aby ustalić, czy ciąg osiągnął konwergencję, wykonuje się zazwyczaj jeden (lub kilka) z opracowanych testów diagnostycznych; w niniejszej rozprawie do tego celu wykorzystano m.in. wskaźnik potencjalnej redukcji skali \parencite[\emph{potential scale reduction factor},][]{gelman1992inference}. Wartości tego współczynnika poniżej 1,1 interpretowane są jako brak powodów do odrzucenia ciągu ze względu na brak konwergencji.\\
+Rozład posterior podsumowuje się zazwyczaj podając jego wartość centralną (np. średnią) i miarę dyspersji (np. odchylenie standardowe). Z perspektywy badacza najbardziej istotne jest poznanie przedziału wiarygodności (\emph{credible interval}). Przedział wiarygodności określa fragment przestrzeni parametrów, w którym skupiony jest określony procent rozkładu (np. 95\%); czyli innymi słowy gdzie określonym z prawdopodobieństwem można spodziewać się wartości parametrów\footnote{Choć ta definicja może nasuwać skojarzenia z przedziałem ufności, nie należy mylić ze sobą tych dwóch koncepcji -- przedział ufności ma zdecydowanie inna mniej intuicyjną interpretację \parencite[zob. np.,][]{gill2014bayesian}.}. Przy wykorzystaniu rozkładu posterior można również testować hipotezy i określić prawdopodobieństwo z jakim parametr (np. współczynnik regresji) lub różnica parametrów (np. różnica średnich) jest większa lub mniejsza od określonej wartości (np. 0). Należy podkreślić, że takie prawdopodobieństwo należy traktować jako prawdopodobieństwo warunkowe (tj. prawdopodobieństwo przyjęcia przez parametry określonych wartości przy uwzględnieniu obserwacji badacza). Ponadto, pomimo, że w niniejszej rozprawie prawdopodobieństwo posterior jest raportowane w podobnej formie jak wartość $p$, należy zaznaczyć, że są to zupełnie różne koncepcje i nie należy mylić ich ze sobą.
 
 
 \newpage
@@ -217,12 +108,12 @@ Dodatkowym celem było sprawdzenie, czy w ramach każdego z warunków układ pre
 \subsubsection{Metoda}
 
 \paragraph{Uczestnicy i schemat badania}
-W badaniu wzięło udział $N=98$ studentów (74 kobiety, 21 mężczyzn, 3 osoby nie zadeklarowały swojej płci) w wieku od 19 do 27 lat ($M = $ 21,26; $SD =$ 1,81). Uczestnicy wypełniali jedną z trzech losowo przydzielonych wersji kwestionariusza: a) dotyczącą indywidualnych cech i indywidualnej samooceny ($n = 34$), b) dotyczącą cech i samooceny siebie jako Polaka ($n = 31$), lub c) dotyczącą kolektywnych cech i kolektywnej samooceny Polaków ($n = 33$). Procedurę losowania do warunków przeprowadzono z zachowaniem proporcji płci. Badanie przeprowadzano w salach wykładowych w grupach od 15 do 30 osób. Po zebraniu kwestionariuszy eksperymentator wyjaśniał grupie cel badania i odpowiadał na pytania.  
+W badaniu wzięło udział $N=98$ studentów (74 kobiety, 21 mężczyzn, 3 osoby nie zadeklarowały swojej płci) w wieku od 19 do 27 lat ($M = $ 21,26; $SD =$ 1,81). Uczestnicy wypełniali jedną z trzech losowo przydzielonych wersji kwestionariusza: a) dotyczącą indywidualnych cech i indywidualnej samooceny ($n = 34$), b) dotyczącą cech i samooceny siebie jako Polaka ($n = 31$), lub c) dotyczącą kolektywnych cech i kolektywnej samooceny Polaków ($n = 33$). Procedurę losowania do warunków przeprowadzono z zachowaniem proporcji płci. Badanie przeprowadzano w salach wykładowych w grupach od 15 do 30 osób. Po zebraniu kwestionariuszy eksperymentator wyjaśniał grupie cel badania i odpowiadał na pytania.
 
 \paragraph{Miary}
 W każdym z trzech warunków uczestnicy wypełniali identyczne miary, a zmianom ulegała jedynie forma stwierdzeń. W warunku a) stwierdzenia rozpoczynały się od zaimka \emph{ja}, w warunku b) stwierdzenia rozpoczynały się od frazy \emph{ja jako Polak}, natomiast w warunku c) od zaimka \emph{my} lub frazy \emph{my Polacy}. Ten zabieg miał na celu zapewnienie maksymalnej porównywalności pomiędzy warunkami badania. Podsumowanie statystyk dla każdej ze skali w trzech warunkach przedstawiono w Tabeli \ref{tab:0}.
 
-\subparagraph{Skala kompetencji, moralności i ciepła} 
+\subparagraph{Skala kompetencji, moralności i ciepła}
 W pierwszej kolejności uczestnicy dokonywali autoaskrypcji 18 cech -- pozytywnych i negatywnych -- związanych z wymiarami kompetencji (np. kompetentny, słaby), moralności (np. moralny, dwulicowy) i ciepła (np. ciepły, ponury); tj. po 3 dla każdej z 6 subskal. Zadaniem każdej osoby była ocena na skali od 1 -- \emph{Zdecydowanie nie} do 7 -- \emph{Zdecydowanie tak} na ile dana cecha do niego/nich pasuje. Miarę zaczerpnięto z poprzednich badań (Soral, Kofta, niepublikowana praca magisterska) -- jej trafność czynnikową i rzetelność zweryfikowano w dodatkowym badaniu pilotażowym. Mimo to dla niektórych ze skal -- w ramach niektórych warunków -- zaobserwowano nieakceptowalne współczynniki rzetelności, $\alpha< 0,60$  (patrz Tabela \ref{tab:0}). Aby poradzić sobie z tą słabością pomiaru, w części analitycznej postanowiono zastosować korektę o błędy pomiarowe dla każdej ze skal.
 
 \subparagraph{Skala samooceny}
@@ -315,7 +206,7 @@ W całej badanej próbie zaprezentowany model wyjaśniał -- z pradowpodobieńst
  Kompetencje &  0,19 & 0,09 &  0,02;0,36 & -0,09 & 0,12 & -0,33;0,16 & -0,05 & 0,09 & -0,24;0,13 \\
  Moralność   & -0,02 & 0,09 & -0,21;0,17 &  0,02 & 0,09 & -0,16;0,20 &  0,20 & 0,09 &  0,03;0,39 \\
  Ciepło      & -0,00 & 0,07 & -0,14;0,12 &  0,19 & 0,08 &  0,05;0,34 &  0,07 & 0,07 & -0,07;0,21 \\
- \multicolumn{10}{c}{\emph{Negatywne}}  \\ 
+ \multicolumn{10}{c}{\emph{Negatywne}}  \\
  Stała       &  3,25 & 0,26 &  2,75;3,75 &  3,57 & 0,23 &  3,13;4,02 &  4,20  & 0,29 & 3,63;4,80 \\
  Kompetencje & -0,21 & 0,06 & -0,33;-0,10 &  0,07 & 0,11 & -0,15;0,29 & -0,09 & 0,07 & -0,24;0,05 \\
  Moralność   & -0,04 & 0,07 & -0,18;0,09 & -0,04 & 0,07 & -0,17;0,10 & -0,14 & 0,05 & -0,25;-0,04 \\
@@ -360,12 +251,12 @@ Model dla cech negatywnych wyjaśniał -- z prawdopodobieństwem $p = 0,95$ od 9
 \subsubsection{Dyskusja}
 
 Badanie 1 przeprowadzono, aby sprawdzić które aspekty Ja -- związane z wymiarem sprawczości czy wspólnotowości -- są wyznacznikami uogólnionej (indywidualnej i kolektywnej) samooceny. Uzyskane wyniki nie potwierdziły hipotezy o szczególnym znaczeniu wymiaru sprawczości dla uogólnionej samooceny. W badaniu wykazano wprawdzie, że wymiar kompetencji ma szczególne znaczenie dla indywidualnej samooceny: osoby które w większym stopniu przypisywały sobie pozytywne cechy sprawcze cechowały się wyższym poziomem indywidualnej samooceny. Nie wykazano jednak, aby wymiar kompetencji miał szczególne znaczenie dla samooceny kolektywnej: przy kontroli pozostałych predyktorów cechy sprawcze nie pozostawały w związku z samooceną siebie jako Polaka lub grupy jako ogółu. \\
-Analogicznie, uzyskane wyniki nie dostarczyły poparcia dla tezy o szczególnym znaczeniu wymiaru wspólnotowości dla uogólnionej samooceny. W zebranej próbie podwymiary wspólnotowości (moralność i ciepło) miały znaczenie dla samooceny kolektywnej, tj. osoby oceniające siebie jako członka grupy lub grupę jako ogół jako moralne i ciepłe cechowały się wyższym poziomem kolektywnej samooceny. Mimo to, ani moralność ani ciepło nie odgrywały roli jako wyznaczniki pozytywnej indywidualnej samooceny.\\ 
-Uzyskane wyniki zdają się bardziej przemawiać za tezą, że wraz poziomami Ja (indywidualnym i kolektywnym) zmieniają się wyznaczniki samooceny. W przeprowadzonym badaniu samoocena indywidualna była wyznaczana przez aspekty związane z wymiarem kompetencji, samoocena siebie jako członka grupy przez cechy związane z wymiarem ciepła, natomiast samoocena grupy jako ogółu przez cechy moralne. \\ 
+Analogicznie, uzyskane wyniki nie dostarczyły poparcia dla tezy o szczególnym znaczeniu wymiaru wspólnotowości dla uogólnionej samooceny. W zebranej próbie podwymiary wspólnotowości (moralność i ciepło) miały znaczenie dla samooceny kolektywnej, tj. osoby oceniające siebie jako członka grupy lub grupę jako ogół jako moralne i ciepłe cechowały się wyższym poziomem kolektywnej samooceny. Mimo to, ani moralność ani ciepło nie odgrywały roli jako wyznaczniki pozytywnej indywidualnej samooceny.\\
+Uzyskane wyniki zdają się bardziej przemawiać za tezą, że wraz poziomami Ja (indywidualnym i kolektywnym) zmieniają się wyznaczniki samooceny. W przeprowadzonym badaniu samoocena indywidualna była wyznaczana przez aspekty związane z wymiarem kompetencji, samoocena siebie jako członka grupy przez cechy związane z wymiarem ciepła, natomiast samoocena grupy jako ogółu przez cechy moralne. \\
 Warto zaznaczyć, że układ predyktorów w ramach pozytywnych i negatywnych aspektów Ja okazał się w przybliżeniu symetryczny. Tak jak aspekty świadczące o kompetencjach były głównym wyznacznikiem wysokiej sammoceny, tak aspekty świadczące o braku kompetencji okazały się głównym wyznacznikiem niskiej samooceny. Analogicznie postrzegane ciepło wyznaczało wysoką samoocenę siebie jako Polaka, natomiast postrzegane zimno niską samoocenę siebie jako członka narodu polskiego. W końcu postrzegana moralność wyznaczała wysoką samoocenę Polaków jako grupy, a nie niemoralność niską samoocenę grupową. \\
 Należy również w tym miejscu opisać zaobserwowane asymetrie. W przypadku modelu dla negatywnych aspektów indywidualnego Ja zaobserwowano pozytywny związek postrzegania siebie jako osoby zimnej z samooceną. Nieraportowane analizy wykazały, że ten związek utrzymuje się również bez kontroli pozostałych predyktorów, a więc nie można go wytłumaczyć zjawiskiem supresji. \\
 W przypadku modelu dla negatywnych aspektów postrzegania Polaków jako grupy asymetrię zaobserwowano w przypadku wymiaru ciepła/zimna. O ile ciepło nie odgrywało roli jako predyktor wysokiej kolektywnej samooceny, tak zimno było znaczącym (obok niemoralności) wyznacznikiem niskiej kolektywnej samooceny.\\
-Podsumowując, uzyskane dane wskazały na konieczność dalszej eksploracji badanego zagadnienia i replikacji uzyskanego wzorca zależności na próbie niestudenckiej: być może szcególna rola wymiaru kompetencji dla indywidualnej samooceny wynikała ze specyfiki tej próby. Ponadto, konieczne okazało się zreplikowanie efektu dla samooceny kolektywnej dla grup innych niż Polacy: możliwe, że szczególna rola ciepła i moralności wynikała z centralności tych wymiarów dla autostereotypu Polaków. \\    
+Podsumowując, uzyskane dane wskazały na konieczność dalszej eksploracji badanego zagadnienia i replikacji uzyskanego wzorca zależności na próbie niestudenckiej: być może szcególna rola wymiaru kompetencji dla indywidualnej samooceny wynikała ze specyfiki tej próby. Ponadto, konieczne okazało się zreplikowanie efektu dla samooceny kolektywnej dla grup innych niż Polacy: możliwe, że szczególna rola ciepła i moralności wynikała z centralności tych wymiarów dla autostereotypu Polaków. \\
 
 \newpage
 \subsection{Badanie 2}
@@ -375,7 +266,7 @@ W niniejszym badaniu postanowiono sprawdzić związek autoaskrypcji kompetencji,
 \subsubsection{Metoda}
 
 \paragraph{Uczestnicy i schemat badania}
-Badanie przeprowadzono na $N=103$ użytkownikach amerykańskiego serwisu mTurk (45 kobiet, 58 mężczyzn). Wiek uczestników wahał się od 18 do 66 lat ($M=$ 31,55, $SD=$ 12,58). Dane innych badaczy wskazują, że choć próby serwisu mTruk nie cechują się reprezentatywością charakterystyczną dla ogólnych prób reprezentatywnych, ich reprezentatywność jest jednak większa niż w przypadku prób przypadkowych lub studenckich \parencite{berinsky2012evaluating}. Podobnie jak w Badaniu 1 uczestnicy zostali losowo przydzieleni do jednego z trzech warunków: a) dotyczącego cech indywidualnych, b) dotyczącego cech siebie jako przedstawiciela grupy (Amerykanina), c) dotyczącego wspólnych cech grupy (Amerykanów). Procedurę losowania przeprowadzono z zachowaniem proporcji płci. Po wypełnieniu kwestionariusza każdy uczestnik przechodził na stronę, na której wyjaśniano mu cel badania. 
+Badanie przeprowadzono na $N=103$ użytkownikach amerykańskiego serwisu mTurk (45 kobiet, 58 mężczyzn). Wiek uczestników wahał się od 18 do 66 lat ($M=$ 31,55, $SD=$ 12,58). Dane innych badaczy wskazują, że choć próby serwisu mTruk nie cechują się reprezentatywością charakterystyczną dla ogólnych prób reprezentatywnych, ich reprezentatywność jest jednak większa niż w przypadku prób przypadkowych lub studenckich \parencite{berinsky2012evaluating}. Podobnie jak w Badaniu 1 uczestnicy zostali losowo przydzieleni do jednego z trzech warunków: a) dotyczącego cech indywidualnych, b) dotyczącego cech siebie jako przedstawiciela grupy (Amerykanina), c) dotyczącego wspólnych cech grupy (Amerykanów). Procedurę losowania przeprowadzono z zachowaniem proporcji płci. Po wypełnieniu kwestionariusza każdy uczestnik przechodził na stronę, na której wyjaśniano mu cel badania.
 
 \paragraph{Miary}
 Tak jak w poprzednim badaniu w każdym warunku uczestnicy wypełniali skale, w których stwierdzenia posiadały identyczne człony główne, a różniły się jedynie formą: \emph{ja, ja jako Amerykanin, my Amerykanie}. Podstawowe statystyki opisowe dla użytych skal przedstawiono w Tabeli \ref{tab:02}.
@@ -427,7 +318,7 @@ Rozkłady posterior parametrów modelu otrzymano na podstawie symulacji MCMC z 4
 W przypadku submodelu dla lubienia siebie jako jednostki wartość parametru dla wymiaru moralności była zbliżona do $0$ i pozytywna z prawdopodobieństwem, $p = $ 0,63. Z kolei wartość parametru dla wymiaru kompetencji była pozytywna z prawdopodobieństwem, $p > $ 0,999. Wartość parametru dla wymiaru ciepła również okazała się pozytywna z $p = $ 0,99. \\
 Dla submodelu lubienia siebie jako Amerykanina, pozytywnym predyktorem -- z prawdopodobieństwem, $p >$ 0,999 -- okazał się jedynie wymiar ciepła. Wartości pozostałych predyktorów były zbliżone do $0$ i pozytywne z $p =$  0,73 w przypadku wymiaru kompetencji, i $p =$ 0,72 w przypadku wymiaru moralności. \\
 W końcu, w przypadku modelu lubienia Amerykanów jako grupy pozytywnym predyktorem okazał się wymiar moralności -- z prawdopodobieństwem, $p >$ 0,999. Wartości parametrów dla pozostałych predyktorów: kompetencji i ciepła były pozytywne z prawdopodobieństwem -- odpowiednio -- $p =$ 0,11 i $p =$ 0,87. \\
-W sumie model dla lubienia siebie wyjaśniał od 4 do 30\% procent wariancji zmiennej objaśnianej (z prawdopodobieństwem $p =$ 0,95). Wykresy rozrzutu wraz z liniami dopasowania przedstawiono na Rycinie \ref{fig:study2a}.\\  
+W sumie model dla lubienia siebie wyjaśniał od 4 do 30\% procent wariancji zmiennej objaśnianej (z prawdopodobieństwem $p =$ 0,95). Wykresy rozrzutu wraz z liniami dopasowania przedstawiono na Rycinie \ref{fig:study2a}.\\
 
 
 \begin{table*}[htbp]
@@ -452,7 +343,7 @@ W sumie model dla lubienia siebie wyjaśniał od 4 do 30\% procent wariancji zmi
  Kompetencje &  0,18 & 0,06 &  0,06;0,30 &  0,05 & 0,08 & -0,10;0,20 & -0,07 & 0,06 & -0,19;0,04 \\
  Moralność   &  0,02 & 0,07 & -0,11;0,15 &  0,04 & 0,07 & -0,10;0,19 &  0,18 & 0,06 &  0,07;0,30 \\
  Ciepło      &  0,14 & 0,05 &  0,05;0,23 &  0,22 & 0,06 &  0,11;0,33 &  0,07 & 0,06 & -0,05;0,19 \\
- \multicolumn{10}{c}{\emph{Sprawczość Ja}}  \\ 
+ \multicolumn{10}{c}{\emph{Sprawczość Ja}}  \\
  Stała       &  0,80 & 0,45 & -0,09;1,71 &  1,90 & 0,36 &  1,20;2,62 &  1,35 & 0,33 &  0,70;1,99 \\
  Kompetencje &  0,28 & 0,05 &  0,18;0,38 &  0,10 & 0,06 & -0,02;0,22 &  0,13 & 0,05 &  0,03;0,23 \\
  Moralność   &  0,02 & 0,06 & -0,10;0,13 & -0,02 & 0,06 & -0,14;0,11 &  0,18 & 0,05 &  0,08;0,28 \\
@@ -489,7 +380,7 @@ Wykresy rozrzutu wraz liniami dopasowania przedstawiono na Rycinie \ref{fig:stud
    \centering
    \fitfigure{study2b.pdf}
    \caption{Autoaskrypcja cech związanych w wymiarami kompetencji, moralności i ciepła, a poziom przekonań o własnej sprawczości. Punkty oznaczają latentne wyniki dla każdej osoby, z kreskami oznaczajacymi błędy pomiarowe. Grubą linią przerywaną oznaczono najlepsze dopasowanie uzyskane w modelu regresyjnym, z cieńszymi liniami oznaczającymi błąd oszacowania.}
-   
+
    \label{fig:study2b}
 \end{figure*}
 
@@ -499,7 +390,7 @@ Celem przedstawionego badania była replikacja wyników uzyskanych w Badaniu 1 n
 W niniejszym badaniu postanowiono również sprawdzić w jakim stopniu autoaskrypcje kompetencji, moralności i ciepła są związane z indywidualną i kolektywną samooceną rozumianą jako przekonania o sprawczości Ja. Choć z pozoru taka analiza wydaje się redundantna -- spodziewać się tu można szczególnie silnej roli cech związanych z wymiarem kompetencji jako predyktorów tak rozumianej samooceny -- uzyskane wyniki wskazały na podobny charakter zależności jak w przypadku samooceny rozumianej jako lubienie siebie. Przekonania o indywidualnej sprawczości były wyznaczane przez wymiar kompetencji, przekonania o sprawczości siebie jako członka grupy przez wymiar ciepła, natomiast przekonania o sprawczości Polaków jako grupy przez wymiar moralności.\\
 Uzyskane dane wskazały na silny charakter zależności pomiędzy poziomami Ja a wyznacznikami samooceny: charakterystyczny nie tylko dla polskiego kontekstu i nie tylko dla prób studenckich, a także nie tylko w przypadku jednej definicji samooceny. Nie można jednak pominąć dwóch wyników, które odróżniały wnioski z Badanie 2 od wniosków z Badania 1 i były niezgodne ze stawianymi w niniejszej rozprawie hipotezami. Pierwszy z nich, to nieoczekiwany związek wymiaru ciepła z indywidualną samooceną (rozumianą zarówna jako lubienie siebie jak i jako przekonania o własnej sprawczości). Drugi, to związek wymiaru kompetencji z przekonaniami o sprawczości Amerykanów jako grupy.\\
 Odnosząc się do pierwszej niespójności, należy zaznaczyć, że miary użyte w Badaniach 1 i 2 dotyczyły ogólnych przekonań o sobie i o grupie własnej. W związku z tym można powiedzieć, że dotyczyły raczej względnie stałych cech i dyspozycji niż stanów. Trudno oczekiwać, aby cechy i dyspozycje były niezmienne na przekroju całej populacji. Wiadomo o istniejących różnicach indywidualnych w zakresie orientacji sprawczej i wspólnotowej \parencite{wojciszke2010skale}, a także, że związek wspólnotowości z samooceną (jako cechą) może być uzależniony od kultury, religijności, wieku i płci \parencite{gebauer2013agency}. Z drugiej strony model sprawcy i biorcy \parencite{wojciszke2011self} omawia dominację treści sprawczych w myśleniu o Ja jako efekt nastawienia specyficznego dla sytuacji implementacji działania \parencite{gollwitzer1997implementation}. Stąd można oczekiwać, że związek pomiędzy sprawczością i indywidualną samooceną oraz brak związku pomiędzy wspólnotowością a samooceną, będzie obserwowany w przypadku samooceny rozumianej raczej jako stan niż cecha. Sprawdzenie tej tezy jest trudne w ramach podejścia korelacyjnego i wymagałoby zastosowania schematu eksperymentalnego (ten problem starano się w rozwiązać w Badaniu 3).\\
-Druga niespójność -- nieoczekiwana rola wymiaru kompetencji jako wyznacznika przekonań o kolektywnej sprawczości -- może być wytłumaczona bliskością treściową użytych skal. Niejasny jest jednak w takiej sytuacji brak związku pomiędzy wymiarem kompetencji a przekonaniami o sprawczości siebie jako członka grupy. Możliwe jest, że omawiany związek nie jest tylko artefaktem metody, ale że poprzez zadanie pytań dotyczących sprawczości adresowano inny niedomyślny obraz grupy. Jeżeli dominacja wspólnotowości jako wyznacznika kolektywnej samooceny wynika z domyślnego przyjmowania perspektywy biorcy w myśleniu o grupie (gdy grupa jest rodzajem \emph{bezpiecznej przystani}), to z pewnością istnieją sytuacje, w których członkowie grupy przyjmują również perspektywę kolektywnego sprawcy. Przekonania o sprawczości grupy zdają się dotyczyć właśniej takich sytuacji. W związku z tym możliwe, że eksperymentalne wzbudzenie perspektywy kolektywnego sprawcy zwiększy rolę wymiaru kompetencji jako wyznaczniki ogólnej kolektywnej samooceny (ten problem starano się rozwiązać w Badaniu 4). 
+Druga niespójność -- nieoczekiwana rola wymiaru kompetencji jako wyznacznika przekonań o kolektywnej sprawczości -- może być wytłumaczona bliskością treściową użytych skal. Niejasny jest jednak w takiej sytuacji brak związku pomiędzy wymiarem kompetencji a przekonaniami o sprawczości siebie jako członka grupy. Możliwe jest, że omawiany związek nie jest tylko artefaktem metody, ale że poprzez zadanie pytań dotyczących sprawczości adresowano inny niedomyślny obraz grupy. Jeżeli dominacja wspólnotowości jako wyznacznika kolektywnej samooceny wynika z domyślnego przyjmowania perspektywy biorcy w myśleniu o grupie (gdy grupa jest rodzajem \emph{bezpiecznej przystani}), to z pewnością istnieją sytuacje, w których członkowie grupy przyjmują również perspektywę kolektywnego sprawcy. Przekonania o sprawczości grupy zdają się dotyczyć właśniej takich sytuacji. W związku z tym możliwe, że eksperymentalne wzbudzenie perspektywy kolektywnego sprawcy zwiększy rolę wymiaru kompetencji jako wyznaczniki ogólnej kolektywnej samooceny (ten problem starano się rozwiązać w Badaniu 4).
 
 \newpage
 \subsection{Badanie 3}
@@ -510,26 +401,26 @@ Na podstawie poprzednich dwóch badań postawiono hipotezę mówiącą, że akty
 
 \paragraph{Uczestnicy i schemat badania}
 W eksperymencie wzięło udział $N = 184$ (90 kobiet i 94 mężczyzn) użytkowników internetowego panelu badawczego w wieku od 20 do 35 lat ($M =$ 26,63; $SD =$ 3,84). Po wyrażeniu zgody na udział w badaniu uczestnicy byli losowo przydzielani do jednego z 4 warunków: w trzech z grup u uczestników aktywizowano treści związane z wymiarami kompetencji lub moralności lub ciepła, natomiast czwarta grupa stanowiła warunek kontrolny. Następnie w ramach każdego z warunków uczestnicy byli losowo przydzielani do jednego z trzech wariantów: `ja jako jednostka' lub `ja jako Polak' lub `my Polacy'. Tak więc w sumie uczestnicy byli przydzieleni do jednego z 12 warunków (średnia liczba uczestników na warunkek wynosiła, $n = 15$); losowanie przeprowadzono z zachowaniem proporcji płci. Po przejściu procedury manipulacji każdy uczestnik wypełniał miarę samooceny oraz miarę skuteczności manipulacji, a następnie był przekierowywany na stronę na której wyjaśniano mu cel badania oraz cel oddziaływania eksperymentalnego.
- 
+
 \paragraph{Procedura manipulacji}
 Każdy uczestnik był proszony o zapoznanie się z listą 8 cech, a następnie o przypomnienie sobie sytuacji w której on (lub w zależności od wariantu: on jako Polak lub Polacy jako grupa) wykazał/wykazali się którąś z cech z listy. Uczestnicy byli proszeni o zastanowienie się przez chwilę nad zdarzeniem, a następnie o przypisanie sobie do trzech cech, którymi wykazali się w przypominanej sytuacji (poprzez przeniesienie cechy do sąsiadującego okna). W zależności od warunku lista cech składała się tylko z cech dotyczących jednego z wymiarów: kompetencji (np. \emph{sprawny, inteligentny}) lub moralności (np. \emph{moralny, sprawiedliwy}) lub ciepła (np. \emph{ciepły, przyjazny}). W warunku kontrolnym listę cech zastąpiono 8 stwierdzeniami dotyczącymi kwestii społeczno-politycznych (np. \emph{Globalizacja niesie za sobą więcej szkody niż pożytku}) i w tym przypadku uczestnik był proszony o przypisanie do trzech najbardziej odpowiadających mu stwierdzeń (lub takich które odpowiadają mu jako Polakowi lub Polakom jako grupie).
 
 \paragraph{Miary}
 Podobnie jak w poprzednich badaniach, stwierdzenia w zastosowanych miarach posiadały identyczne człony główne, a różniły się pomiędzy wariantami jedynie formą: dotyczyły `ja' jako jednostki, jako Polaka lub Polaków jako grupy.
- 
+
 \subparagraph{Skala samooceny}
 W eksperymencie zastosowano identyczną skalę samooceny jak w Badaniu 1. Składała się ona z 13 stwierdzeń (w tym 6 kodowanych odwrotnie), np. \emph{Uważam, że jestem osobą wartościową przynajmniej w takim samym stopniu co inni}. Uczestnicy odpowiadali na ile zgadzają się z każdym ze stwierdzeniem na skali od 1 -- \emph{Zdecydowanie się nie zgadzam} do 4 -- \emph{Zdecydowanie się zgadzam}. \\
 Skala cechowała się zadowalającą zgodnością wewnętrzną w każdym z 3 wariantów: ja jako jednostka, $\alpha$ = 0,91; ja jako Polak, $\alpha$ = 0,92; my Polacy, $\alpha$ = 0,85.
 \subparagraph{Pomiar skuteczności manipulacji}
 Aby sprawdzić, czy zastosowana procedura manipulacji prowadziła do aktywizacji treści związanych z wymiarami kompetencji, moralności i ciepła po wypełnieniu skali samooceny każdy uczestnik przechodził do części, w której na osobnych stronach prezentowano mu 8 cech: 2 dwie pierwsze o charakterze buforowym (\emph{realistyczny, poważny}) oraz po dwie cechy związane z wymiarami kompetencji (\emph{dokładny, bystry}), moralności (\emph{prawy, szczery}), i ciepła (\emph{miły, troskliwy}). Żadna z prezentowanych cech nie pojawiała się w procedurze manipulacji. \\
-Uczestnicy mieli ocenić na ile każda z cech jest dla nich charakterystyczna (lub w zależności od wariantu dla nich jako Polaków lub dla Polaków jako grupy) i zaznaczyć odpowiedź jak najszybciej to możliwe na skali od 1 -- \emph{Zdecydowanie nie} do 7 -- \emph{Zdecydowanie tak}. Co istotne, oprócz odpowiedzi dla każdej cechy kodowano czas w którym uczestnicy dokonali pierwszego kliknięcia. Założono, że aktywizacja wymiaru kompetencji, moralności lub ciepła będzie prowadziła do szybszej reakcji na cechy związane z każdym z wymiarów. 
- 
+Uczestnicy mieli ocenić na ile każda z cech jest dla nich charakterystyczna (lub w zależności od wariantu dla nich jako Polaków lub dla Polaków jako grupy) i zaznaczyć odpowiedź jak najszybciej to możliwe na skali od 1 -- \emph{Zdecydowanie nie} do 7 -- \emph{Zdecydowanie tak}. Co istotne, oprócz odpowiedzi dla każdej cechy kodowano czas w którym uczestnicy dokonali pierwszego kliknięcia. Założono, że aktywizacja wymiaru kompetencji, moralności lub ciepła będzie prowadziła do szybszej reakcji na cechy związane z każdym z wymiarów.
+
 \subsubsection{Wyniki}
 \paragraph{Sprawdzenie skuteczności manipulacji}
 Aby upewnić się co do skuteczności manipulacji porównano czasy reakcji na cechy związane z wymiarami kompetencji, moralności i ciepła w ramach każdego z czterech warunków eksperymentalnych. W tym celu przeprowadzono 3 analizy kontrastów w ramach hierarchicznego modelu liniowego \parencite[odpowiednika  klasycznej jednoczynnikowej analizy wariancji, za:,][]{kruschke2014doing} z odpornymi błędami rozproszonymi zgodnie z rozkładem t Studenta (z liczbą stopni swobody, $\nu = 7$).\\
 W ramach pierwszej analizy porównano czasy odpowiedzi na pytania dotyczące wymiaru kompetencji. Osoby przypominające sobie wydarzenia dotyczące kompetencji odpowiadały na te pytania o 1,40 sekundy szybciej niż osoby w pozostałych warunków -- różnica była większa od 0 z $p =$ 0,99 -- i o 0,75 sekundy szybciej niż w warunku kontrolnym -- różnica większa od 0 z $p =$ 0,99.\\
 Następnie porównano czasy odpowiedzi na pytania dotyczące wymiaru moralności. U osób przypominających sobie wydarzenia dotyczące moralności odpowiedzi na te pytania były szybsze o 0,61 sekundy niż w pozostałych warunkach -- różnica większa od 0 z $p =$ 0,87 -- i szybsze o 0,46 sekundy niż w warunku kontrolnym -- różnica większa od 0 z $p =$ 0,97. \\
-W końcu porównano odpowiedzi na pytania dotyczące wymiaru ciepła. U osób przypominających sobie wydarzenia dotyczące ciepła czasu odpowiedzi na pytania dotyczące tego wymiaru były szybsze o 0,16 sekundy -- różnica była większa od 0 z $p =$ 0,80. Nie zanotowano różnicy pomiędzy warunkiem dotyczącym ciepła a średnią z pozostałych warunków -- różnica była większa od 0 z $p =$ 0,49.\\ 
+W końcu porównano odpowiedzi na pytania dotyczące wymiaru ciepła. U osób przypominających sobie wydarzenia dotyczące ciepła czasu odpowiedzi na pytania dotyczące tego wymiaru były szybsze o 0,16 sekundy -- różnica była większa od 0 z $p =$ 0,80. Nie zanotowano różnicy pomiędzy warunkiem dotyczącym ciepła a średnią z pozostałych warunków -- różnica była większa od 0 z $p =$ 0,49.\\
 Analogiczne analizy dla odpowiedzi nie przyniosły różnic pomiędzy warunkami. Pomimo umiarkowanego poparcia dla skuteczności manipulacji (zwłaszcza w przypadku aktywizacji wymiaru ciepła), postanowiono sprawdzić w jakim stopniu zastosowane oddziaływanie wpłynęło na poziom samooceny.\\
 
 \paragraph{Aktywizacja wymiarów komptetencji, moralności i ciepła a poziom uogólnionej samooceny}
@@ -541,7 +432,7 @@ y_i  \sim\ & N(\mu_i, \sigma_y) \\
 \sigma_y \sim U(0.01,6.41)\ &\ \beta_0 \sim N(2.80, 3.21) \\
 \beta_1 \sim N(0, \sigma_{\beta1})\ &\ \beta_2 \sim N(0, \sigma_{\beta2}) \\
 \beta_{1\times2} \sim\ & N(0, \sigma_{\beta1\times2}) \\
-\sigma_{\beta1} \sim IG(1.28,0.88)\ \ \sigma_{\beta2} \sim\ & IG(1.28,0.88)\ \ \sigma_{\beta1\times2} \sim IG(1.28,0.88) 
+\sigma_{\beta1} \sim IG(1.28,0.88)\ \ \sigma_{\beta2} \sim\ & IG(1.28,0.88)\ \ \sigma_{\beta1\times2} \sim IG(1.28,0.88)
 \end{split}
 \end{equation}
 gdzie $y$ oznacza poziom samooceny, $x_1$ warunek eksperymentalny, a $x_2$ wariant eksperymentu (oznaczenia rozkładów: $N$ -- rozkład Normalny; $U$ -- rozkład prostokątny; $IG$ -- odwrócowny rozkład Gamma). Dzięki takiemu sformułowaniu modelu możliwe było obliczenie odchyleń od średniej ogólnej dla efektów głównych warunku oraz wariantu eksperymentu, a także sformułowanie kontrastów. \\
@@ -606,7 +497,7 @@ Celem tego badania było sprawdzenie, czy wzbudzenie pozytywnych asocjacji Ja z 
 \end{figure*}
 
 
- 
+
 \newpage
 \subsection{Badanie 4}
 
@@ -616,7 +507,7 @@ Przyjęto, że jednym z czynników mogących skłaniać do wchodzenia w perspekt
 
 \subsubsection{Metoda}
 
-\paragraph{Uczestnicy i schemat badania} 
+\paragraph{Uczestnicy i schemat badania}
 W eksperymencie wzięło udział $N=343$ (191 kobiet, 140 mężczyzn, 12 osób nie określiło swojej płci) użytkowników internetowego panelu badawczego w wieku od 18 od 69 lat ($M$ = 36,21; $SD$ = 12,82). Po wyrażeniu zgody na udział w badaniu uczestnicy byli losowo przydzielani do jednego z dwóch warunków: kontrolnego ($n = 170$) lub warunku z zagrożeniem ($n = 173$). Po wypełnieniu kwestionariusza każdy uczestnik był przekierowywany na stronę, na której wyjaśniano cel badania i zastosowaną manipulację eksperymentalną.
 
 \paragraph{Procedura manipulacji}
@@ -629,7 +520,7 @@ Badanie pilotażowe wykazało, że ten rodzaj manipulacji jest skuteczny we wzbu
 \subparagraph{Skala kompetencji, moralności i ciepła}
 Natychmiast po zapoznaniu się z artykułem (lub w warunku kontrolnym, po rozpoczęciu badania) uczestnicy w obu warunkach oceniali Polaków (\emph{my Polacy jesteśmy...}) przy użyciu 21 pozytywnych cech związanych z wymiarami kompetencji (np. \emph{zdolni, umiejętni}), moralności (np. \emph{uczciwi, sprawiedliwi}), lub ciepła (np. \emph{przyjaźni, sympatyczni}). W przypadku każdej cechy uczestnicy oceniali czy pasuje ona do Polaków czy nie przy użyciu 7-stopniowej skali od 1 -- \emph{Zdecydowanie nie} do 7 -- \emph{Zdecydowanie tak}.\\
 Zastosowana wersja skali została zapożyczona z badań Wojciszke i współpracowników (niepublikowany raport z badań). Poszczególne subskale charakteryzowały się wysoką zgodnością wewnętrzną. Podsumowanie charakterystyk przedstawiono w Tabeli \ref{tab:5}.
- 
+
 \subparagraph{Skala kolektywnej samooceny}
 Po dokonaniu askrypcji cech uczestnicy wypełniali składającą się z 13 pozycji skalę kolektywnej samooceny. Zastosowana skala była identyczna do skal zastosowanych w badaniach 1 i 3, a zawarte w niej stwierdzenia były przedstawione w formie odnoszącej się do Polaków jako grupy: ``my, Polacy'' Zadaniem każdego z uczestników była ocena na ile zgadzają się z każdym ze stwierdzeń na skali od 1 -- \emph{Zdecydowanie się nie zgadzam} do 4 -- \emph{Zdecydowanie się zgadzam}. Podsumowanie charakterystyk skali przedstawiono w Tabeli \ref{tab:5}.
 
@@ -730,9 +621,9 @@ Wysoka samoocena przy jednoczesnej wrogości i zimnie wobec innych osób może b
 
 
 Dla wariantu, w którym uczestnicy oceniali Polaków jako grupę nie zaobserwowano różnic pomiędzy warunkiem kontrolnym a warunkiem dotyczącym moralności. Możliwe, że ten brak różnic wynikał ze specyfiki treści obecnych w warunku kontrolnym -- dotyczyły one przekonań o charakterze społeczno-politycznym i jako takie mogły sprzyjać procesowi autoafirmacji \parencite{steele1988psychology}. Możliwe jest również, że myślenie o moralności grupy własnej ma charakter myślenia autoafirmacyjnego, niewątpliwie istotnego czynnika w buforowaniu myśli związanych ze śmiercią \parencite{pyszczynski2004people}. Niewielkie różnice pomiędzy warunkiem dotyczącym moralności i warunkiem kontrolnym mogą świadczyć o tym, że zadania w obu warunkach mogły spełniać podobne funkcje w ramach myślenia o grupie własnej. Z drugiej strony znaczne różnice pomiędzy warunkiem kontrolnym a warunkami kompetencji i ciepła w ramach pozostałych poziomów Ja, wydają się przemawiać za tezą, że proces autoafirmacji może być szczególnie skuteczny w ramach myślenia o kategoriach kolektywnych. Te hipotezy należałoby zweryfikować w przyszłych projektów badawczych.
- 
+
 
 
 \printbibliography
 
-\end{document} 
+\end{document}

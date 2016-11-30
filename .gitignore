@@ -1,0 +1,13 @@
+# Latex middle files #
+######################
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fff
+*.fls
+*.log
+*.run.xml
+*.synctex.gz
+*.ttt
